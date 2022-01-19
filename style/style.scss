@@ -1,0 +1,260 @@
+@import "./helpers/vars.scss";
+@import "./helpers/mixin.scss";
+@import "./helpers/animations.scss";
+@import "./helpers/reset.scss";
+.tilt-in-top-1 {
+    -webkit-animation: tilt-in-top-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: tilt-in-top-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+.cart-link {
+    position: relative;
+}
+.cart-items-count {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: $main-color;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+}
+.cart-table {
+    position: absolute;
+    background: #fff;
+    width: 500px;
+    right: 0;
+}
+.cart-table_disabled {
+    display: none;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    @media (max-width: 1200px) {
+        max-width: calc(768px - 16px * 2);
+    }
+}
+
+.hidden {
+    position: absolute;
+    left: -99999px;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+/* header */
+
+@import "blocks/_header.scss";
+@import "blocks/side-menu.scss";
+/* Promo */
+
+.promo {
+    background: #f1e4e6;
+    /* margin-bottom: 65px; */
+    /* Или для категорий верхний margin или padding */
+}
+
+.promo__container {
+    display: flex;
+    align-items: center;
+    min-height: 764px;
+    justify-content: flex-end;
+    @media (max-width: 1200px) {
+        justify-content: space-between;
+    }
+}
+
+.promo__picture {
+    transform: translateY(16px);
+}
+
+.promo__text {
+    width: 406px;
+    margin-left: 254px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #222222;
+    position: relative;
+    margin-right: 105px;
+    @media (max-width: 1200px) {
+        font-size: 24px;
+        width: 203px;
+        margin-left: 0;
+        line-height: 29px;
+    }
+}
+
+.promo__text_big {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    @media (max-width: 1200px) {
+        font-size: 44px;
+        line-height: 53px;
+    }
+}
+
+.promo__text_bright {
+    color: $main-color;
+}
+
+.promo__text::before {
+    content: "";
+    display: block;
+    background: $main-color;
+    width: 12px;
+    height: 92px;
+    position: absolute;
+    left: -28px;
+}
+
+/* categories */
+
+.categories {
+    padding: 65px 0;
+}
+
+.categories__card-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.categories__card,
+.categories__special {
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.categories__card {
+    width: 360px;
+    padding: 105px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.categories__info {
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.categories__title {
+    font-size: 24px;
+    line-height: 29px;
+    color: $main-color;
+}
+
+.categories__image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.categories__special {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 65px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/accesories.jpg");
+}
+
+.card-women {
+    background-image: url("../img/women.jpg");
+}
+
+.card-men {
+    background-image: url("../img/men.jpg");
+}
+
+.card-kids {
+    background-image: url("../img/kids.jpg");
+}
+
+/* Products */
+@import "blocks/products";
+
+/* Features */
+
+@import "blocks/features";
+
+/* feedback */
+
+@import "blocks/feedback";
+
+// footer
+@import "blocks/footer";
+
+/* catalog page */
+
+.breadcrumb {
+    padding: 60px;
+    background-color: #f8f3f4;
+}
+
+.breadcrumb__heading {
+    font-size: 24px;
+    line-height: 29px;
+    color: $main-color;
+    text-transform: uppercase;
+}
+
+.breadcrumb__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.breadcrumbs__item {
+    margin-right: 10px;
+}
+
+.breadcrumbs__item::before {
+    content: "/";
+    margin-right: 10px;
+}
+
+.breadcrumbs__item:first-child:before {
+    content: none;
+}
+
+.breadcrumbs__link {
+    text-decoration: none;
+    font-weight: 300;
+    color: #636363;
+}
+
+.breadcrumbs__link_current {
+    font-weight: bold;
+    color: $main-color;
+}
+
+/* product page */
+
+@import "./blocks/slider";
+
+@import "./blocks/product-details";
+
+@import "./blocks/cart";
