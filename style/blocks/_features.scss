@@ -1,0 +1,32 @@
+.features {
+    background: #222222;
+    color: #fff;
+}
+
+.features__container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+
+.features__item {
+    padding: 105px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.features__title {
+    font-size: 19.96px;
+    line-height: 24px;
+    color: #FBFBFB;
+    margin: 16px 0;
+}
+
+.features__text {
+    font-weight: 300;
+    font-size: 13.972px;
+    line-height: 17px
+}

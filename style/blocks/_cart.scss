@@ -1,0 +1,157 @@
+.page-title {
+    background: $main-background-color;
+    padding: 60px 0;
+    &__heading {
+        font-size: 24px;
+        line-height: 29px;
+        color: $main-color;
+        text-transform: uppercase;
+    }
+}
+
+.cart {
+    padding: 96px 0 128px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image {
+        height: 100%;
+    }
+    &__goods {
+        margin-right: 128px;
+        flex-grow: 1;
+    }
+
+    &__goods-box {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__goods-item {
+        display: flex;
+        position: relative;
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+        padding-right: 160px;
+    }
+    &__good-info {
+        padding: 22px;
+    }
+    &__info-text {
+        font-size: 22px;
+        line-height: 26px;
+        color: #575757;
+        margin-bottom: 8px;
+    }
+    &__good-title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 42px;
+    }
+    &__form {
+        min-width: 360px;
+    }
+
+    &__quantity-input {
+        width: 44px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &__price-value {
+        color: $main-color;
+    }
+    &__close-button {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        font-size: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 89px;
+    }
+    &__button {
+        padding: 16px 40px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        background: transparent;
+        border: 1px solid #4a4a4a;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #4a4a4a;
+    }
+
+    &__form-heading {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+
+    &__input-box {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 69px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__form-input {
+        padding: 16px 17px;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #b1b1b1;
+        border: 1px solid;
+    }
+    &__shipping-button {
+        align-self: start;
+        font-size: 11px;
+        padding: 10px 15px;
+    }
+    &__form-totals {
+        background: #f5f3f3;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 34px 42px;
+        text-transform: uppercase;
+    }
+    &__sub-total {
+        font-size: 11px;
+        line-height: 13px;
+        color: #4a4a4a;
+        margin-bottom: 19px;
+    }
+    &__grand-total {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+        &::after {
+            content: "";
+            display: block;
+            border-top: 1px solid #e2e2e2;
+            margin: 21px auto 17px;
+        }
+    }
+    &__totals-value {
+        margin-left: 22px;
+    }
+    &__grand-total-value {
+        font-weight: bold;
+        color: $main-color;
+    }
+    &__checkout-button {
+        background: $main-color;
+        color: #ffffff;
+        border: none;
+    }
+}

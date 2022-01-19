@@ -1,0 +1,50 @@
+.nav-menu {
+    font-size: 14px;
+    line-height: 17px;
+    position: absolute;
+    background: #fff;
+    top: 75px;
+    right: 0;
+    width: 232px;
+    min-height: 764px;
+    padding: 43px 32px;
+    transform: scaleY(0);
+    &__title {
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        text-transform: uppercase;
+    }
+    &__category-link {
+        font-size: 14px;
+        line-height: 17px;
+        color: #f16d7f;
+        text-transform: uppercase;
+    }
+    &__link {
+        color: #6f6e6e;
+    }
+    &__wrapper {
+        position: relative;
+    }
+    &__close-button {
+        position: absolute;
+        top: -9px;
+        right: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    &__category-item {
+        padding: 24px 0;
+    }
+    &__item {
+        margin-top: 11px;
+    }
+    &__links {
+        padding-left: 21px;
+    }
+    &_open {
+        transform: scaleY(1);
+    }
+}

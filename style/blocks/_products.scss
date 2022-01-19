@@ -1,0 +1,257 @@
+.products {
+    padding-bottom: 95px;
+}
+
+.products__title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.products__description {
+    font-size: 14px;
+    line-height: 17px;
+    color: #9f9f9f;
+    text-align: center;
+}
+
+.products__card-box {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.products__card {
+    width: 360px;
+    background: #f8f8f8;
+    margin-bottom: 30px;
+}
+
+.products__card-text {
+    padding: 16px 20px;
+}
+
+.products__card-title {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.products__card-description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 12px 0 18px;
+}
+
+.products__card-price {
+    font-size: 16px;
+    line-height: 19px;
+    color: $main-color;
+}
+
+.products__link-box {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.products__link {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    color: #f26376;
+    padding: 15px 39px;
+    border: 1px solid;
+    display: inline-block;
+    @include color-transition;
+}
+
+.products__link:hover {
+    background-color: $main-color;
+    color: #fff;
+}
+
+.products__card-video {
+    width: 360px;
+    height: 420px;
+}
+
+.products {
+    &__image {
+        position: relative;
+        overflow: hidden;
+    }
+    // Выше код просто скопирован, ниже добавляю
+    &__image-wrapper {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #3a3838c7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-100%);
+        transition: transform 0.4s;
+    }
+    &__product-link {
+        border: 1px solid #ffffff;
+        background: transparent;
+        padding: 10px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        @include color-transition;
+        &:hover {
+            background: $main-color;
+        }
+    }
+    &__cart-icon {
+        margin-right: 11px;
+    }
+    &__image:hover &__image-wrapper {
+        transform: translate(0);
+    }
+}
+
+.products__controls {
+    padding-top: 35px;
+    display: flex;
+    gap: 30px;
+}
+
+.sort-list {
+    display: flex;
+    list-style: none;
+    padding-top: 15px;
+}
+.products__filter {
+    width: 360px;
+    position: relative;
+    &-title {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 15px;
+        &::after {
+            content: "";
+            display: inline-block;
+            background-image: url("../img/filter-icon.svg");
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 10px;
+            margin-left: 11px;
+        }
+    }
+    &-types {
+        margin-bottom: 18px;
+    }
+    &-types-title {
+        display: block;
+        color: $main-color;
+        text-transform: uppercase;
+        border-bottom: 1px solid #ebebeb;
+        padding: 15px;
+        border-left: 5px $main-color solid;
+    }
+    &-content {
+        position: absolute;
+        z-index: 1000;
+        background-color: #fff;
+        width: 100%;
+        padding: 15px;
+    }
+    &-item {
+        padding: 8px 0;
+    }
+    &-link {
+        padding: 8px 0;
+        color: #6f6e6e;
+    }
+    &-values {
+        padding: 15px;
+    }
+}
+
+.products__filter[open] {
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    & .products__filter-content {
+        box-shadow: 4px 8px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+}
+.sort-item {
+    margin-right: 28px;
+}
+.sort-details {
+    position: relative;
+    &-list {
+        position: absolute;
+        z-index: 100;
+        padding: 8px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 79px;
+        color: #6f6e6e;
+    }
+    &-checkbox {
+        margin-right: 9px;
+    }
+}
+.sort-details[open] .sort-details-list {
+    box-shadow: 4px 8px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.drop-down-button {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.drop-down-button::after {
+    content: "";
+    display: inline-block;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10px;
+    height: 5px;
+    margin-left: 11px;
+}
+
+.products__pagination-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.products__pagination-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+
+.products__pagination-link {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #c4c4c4;
+    padding: 10px;
+}
+
+.products__pagination-link_current {
+    color: #ef5b70;
+}

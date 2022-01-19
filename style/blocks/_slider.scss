@@ -1,0 +1,26 @@
+.slider-container {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+}
+
+.slider-button {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2a2a2a38;
+    border: none;
+    font-size: 31px;
+    line-height: 17px;
+    color: #6f6e6e;
+    text-transform: uppercase;
+    @include color-transition;
+}
+
+.slider-button:hover {
+    color: $main-color;
+}
